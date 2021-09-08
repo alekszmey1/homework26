@@ -45,8 +45,8 @@ func main() {
 	} else if i == 2 {
 		concatenation(treatment(os.Args[1]),treatment(os.Args[2]))
 	}else if i == 3 {
-		concatenation(treatment(os.Args[1]),treatment(os.Args[2]))
-		file, err := os.Create("thirdFile.txt")
+		f:= os.Args[i]
+		file, err := os.Create(f)
 		if err != nil {
 			log.Fatal("ошибка открытия файла")
 		}
